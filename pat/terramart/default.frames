@@ -1,0 +1,38 @@
+{
+  "frameGrid" : {
+    "size" : [80, 64],
+    "dimensions" : [2, 30],
+    "names" : [
+      ["reload.1", "default.1"],
+      ["reload.2", null],
+      ["reload.3", null],
+      ["reload.4", null],
+      ["reload.5", null],
+      ["reload.6", null],
+      ["reload.7", null],
+      ["reload.8", null],
+      ["reload.9", null],
+      ["reload.10", null],
+      ["reload.11", null],
+      ["reload.12", null],
+      ["reload.13", null],
+      ["reload.14", null],
+      ["reload.15", null],
+      ["reload.16", null],
+      ["reload.17", null],
+      ["reload.18", null],
+      ["reload.19", null],
+      ["reload.20", null],
+      ["reload.21", null],
+      ["reload.22", null],
+      ["reload.23", null],
+      ["reload.24", null],
+      ["reload.25", null],
+      ["reload.26", null],
+      ["reload.27", null],
+      ["reload.28", null],
+      ["reload.29", null],
+      ["reload.30", null]
+    ]
+  }
+}

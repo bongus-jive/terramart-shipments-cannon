@@ -1,0 +1,80 @@
+{
+  "itemName" : "pat_terramart",
+  "price" : 69420,
+  "inventoryIcon" : "cropshipper.png:default.1",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Yes",
+  "shortdescription" : "Terramart Shipments Gun",
+  "level" : 10,
+  "tooltipKind" : "gun",
+  "category" : "rocketLauncher",
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+  "twoHanded" : true,
+
+  "animation" : "cropshipper.animation",
+  "animationParts" : {
+    "middle" : "cropshipper.png",
+    "muzzleFlash" : ""
+  },
+
+  "baseOffset" : [3.75, 0.75],
+  "muzzleOffset" : [4.5, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/pat/terramart/cropshipper.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 6,
+    "baseDps" : 0.33,
+    "energyUsage" : 70,
+    "inaccuracy" : 0.001,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : ["pat_cropshipment"],
+    "projectileParameters" : {
+      "knockback" : 100
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "animationStates" : {
+          "body" : "reload"
+        },
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.3,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
