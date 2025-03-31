@@ -1,0 +1,112 @@
+{
+  "globalTagDefaults": {
+    "direction": "R"
+  },
+
+  "animatedParts": {
+    "stateTypes": {
+      "gun": {
+        "default": "ready",
+        "states": {
+          "ready": {
+            "frames": 2,
+            "cycle": 0.25,
+            "mode": "loop"
+          },
+          "reload": {
+            "frames": 16,
+            "cycle": 2,
+            "mode": "transition",
+            "transition": "ready",
+            "properties": {
+              "immediateSoundRangeMultiplier": 0.5
+            },
+            "frameProperties": {
+              "immediateSound": [ "", "/sfx/objects/cropshipper_door_open.ogg", "", "", "", "", "/sfx/objects/cropshipper_arm_up.ogg", "", "", "", "", "", "", "", "/sfx/objects/cropshipper_box_lock3.ogg", "" ]
+            }
+          },
+          "fire": {
+            "frames": 11,
+            "cycle": 1.375,
+            "mode": "transition",
+            "transition": "reload",
+            "properties": {
+              "immediateSoundRangeMultiplier": 0.5
+            },
+            "frameProperties": {
+              "immediateSound": [ "", "/sfx/objects/cropshipper_arm_down.ogg", "", "", "", "", "", "", "/sfx/objects/cropshipper_door_close.ogg", "", "" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts": {
+      "gun": {
+        "properties": {
+          "zLevel": 0,
+          "centered": true,
+          "offset": [ 4, 1 ],
+          "transformationGroups": [ "weapon" ]
+        },
+        "partStates": {
+          "gun": {
+            "ready": { "properties": { "image": "<partImage>:ready.<direction>.<frame>" } },
+            "reload": { "properties": { "image": "<partImage>:reload.<frame>" } },
+            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } }
+          }
+        }
+      },
+      "gunfb": {
+        "properties": {
+          "zLevel": 2,
+          "centered": true,
+          "fullbright": true,
+          "offset": [ 4, 1 ],
+          "transformationGroups": [ "weapon" ]
+        },
+        "partStates": {
+          "gun": {
+            "ready": { "properties": { "image": "<partImage>:ready.<direction>.<frame>" } },
+            "reload": { "properties": { "image": "<partImage>:reload.<frame>" } },
+            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } }
+          }
+        }
+      },
+      "sign": {
+        "properties": {
+          "zLevel": 1,
+          "centered": true,
+          "offset": [ 4, 1 ],
+          "transformationGroups": [ "weapon" ],
+          "image": "<partImage>:<direction>"
+        }
+      }
+    }
+  },
+
+  "transformationGroups": {
+    "weapon": { },
+    "muzzle": { }
+  },
+
+  "particleEmitters": {
+    "muzzleFlash": {
+      "transformationGroups": [ "muzzle" ],
+      "offsetRegion": [ 0, 0, 0, 0 ],
+      "particles": [ ]
+    }
+  },
+
+  "lights": {
+    "muzzleFlash": {
+      "active": false,
+      "position": [ 0, 0 ],
+      "color": [ 90, 90, 0 ]
+    }
+  },
+
+  "sounds": {
+    "fire": [ "/sfx/objects/cropshipper_launch.ogg" ]
+  }
+}

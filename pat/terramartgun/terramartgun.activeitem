@@ -1,0 +1,62 @@
+{
+  "itemName": "pat_terramartgun",
+  "price": 69420,
+  "inventoryIcon": "images/icon.png",
+  "maxStack": 1,
+  "rarity": "Legendary",
+  "description": "Yes",
+  "shortdescription": "Terramart Shipments Gun",
+  "level": 10,
+  "tooltipKind": "gun",
+  "category": "rocketLauncher",
+  "itemTags": [ "weapon", "ranged", "rocketlauncher" ],
+  "twoHanded": true,
+
+  "animation": "terramartgun.animation",
+  "animationParts": {
+    "gun": "images/terramartgun.png",
+    "gunfb": "images/terramartgunfb.png",
+    "sign": "images/sign.png"
+  },
+
+  "muzzleOffset": [ 8.0, 1 ],
+
+  "scripts": [ "/items/active/weapons/ranged/gun.lua" ],
+
+  "elementalType": "physical",
+
+  "primaryAbility": {
+    "scripts": [ "/pat/terramartgun/terramartgun.lua" ],
+    "class": "GunFire",
+
+    "fireTime": 1,
+    "baseDps": 0.33,
+    "energyUsage": 70,
+
+    "projectileType": "pat_cropshipment",
+    "projectileParameters": { },
+
+    "stances": {
+      "__base": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true
+      },
+      "idle": { },
+      "fire": {
+        "duration": 0,
+        "animationStates": {
+          "gun": "fire"
+        }
+      },
+      "cooldown": {
+        "duration": 1.2,
+        "weaponOffset": [ -0.5, 0 ]
+      }
+    }
+  },
+
+  "builder": "/items/buildscripts/buildunrandweapon.lua"
+}
