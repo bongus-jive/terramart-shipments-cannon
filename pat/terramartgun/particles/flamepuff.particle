@@ -1,0 +1,24 @@
+{
+  "kind": "pat_terramartgun_flamepuff",
+  "definition": {
+    "type": "animated",
+    "animation": "/animations/flamepuff/flamepuff.animation",
+    "layer": "back",
+    "fullbright": true,
+    "size": 0.75,
+    "position": [ -1.5, 0 ],
+    "initialVelocity": [ -10, 0 ],
+    "finalVelocity": [ -5, 0 ],
+    "approach": [ 50, 0 ],
+    "timeToLive": 0.1,
+    "destructionTime": 0.1,
+    "destructionAction": "shrink",
+    "variance": {
+      "size": 0.25,
+      "position": [ 0.25, 0.5 ],
+      "initialVelocity": [ 5, 5 ],
+      "rotation": 180,
+      "angularVelocity": 180
+    }
+  }
+}

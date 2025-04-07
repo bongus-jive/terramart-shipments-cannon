@@ -1,0 +1,34 @@
+{
+  "projectileName": "pat_terramartgun_crate",
+  "image": "crate.png",
+  "frameNumber": 1,
+  "timeToLive": 5,
+  "lightColor": [ 160, 120, 60 ],
+  "pointLight": true,
+  "flippable": true,
+  "power": 10,
+  "speed": 2,
+  "acceleration": 80,
+  "bounces": 0,
+
+  "physics": "rocket",
+  "movementSettings": {
+    "collisionPoly": [ [ 1, 1.5 ], [ 1, -1.5 ], [ -1, -1.5 ], [ -1, 1.5 ] ]
+  },
+  "damagePoly": [ [ 12, 16 ], [ 12, -16 ], [ -8, -16 ], [ -8, 16 ] ],
+
+  "persistentAudio": "/sfx/tech/tech_jetpack.ogg",
+
+  "periodicActions": [
+    {
+      "time": 0.02,
+      "action": "loop",
+      "count": 2,
+      "body": [
+        { "action": "particle", "rotate": true, "specification": "pat_terramartgun_smoke" },
+        { "action": "particle", "rotate": true, "specification": "pat_terramartgun_flamepuff" },
+        { "action": "particle", "rotate": true, "specification": "pat_terramartgun_fireshard" }
+      ]
+    }
+  ]
+}

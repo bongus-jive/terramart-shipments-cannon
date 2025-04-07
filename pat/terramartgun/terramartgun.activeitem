@@ -33,7 +33,7 @@
     "baseDps": 0.33,
     "energyUsage": 70,
 
-    "projectileType": "pat_cropshipment",
+    "projectileType": "pat_terramartgun_crate",
     "projectileParameters": { },
 
     "stances": {
