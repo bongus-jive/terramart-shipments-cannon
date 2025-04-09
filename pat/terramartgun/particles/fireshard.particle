@@ -5,6 +5,8 @@
     "animation": "/animations/shards/fireshard.animation",
     "layer": "back",
     "fullbright": true,
+    "light": [ 191, 103, 2 ],
+    "fade": 2,
     "size": 0.5,
     "position": [ -1.5, 0 ],
     "initialVelocity": [ -10, 0 ],
