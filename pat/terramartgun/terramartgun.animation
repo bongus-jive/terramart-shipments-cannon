@@ -15,7 +15,7 @@
           },
           "reload": {
             "frames": 16,
-            "cycle": 2,
+            "cycle": 1.76,
             "mode": "transition",
             "transition": "ready",
             "properties": {
@@ -27,7 +27,7 @@
           },
           "fire": {
             "frames": 11,
-            "cycle": 1.375,
+            "cycle": 1.21,
             "mode": "transition",
             "transition": "reload",
             "properties": {
@@ -107,6 +107,9 @@
   },
 
   "sounds": {
-    "fire": [ "/sfx/objects/cropshipper_launch.ogg" ]
+    "fire": {
+      "pool": [ "/sfx/objects/cropshipper_launch.ogg" ],
+      "volume": 1.2
+    }
   }
 }
