@@ -30,5 +30,65 @@
         { "action": "particle", "rotate": true, "specification": "pat_terramartgun_fireshard" }
       ]
     }
+  ],
+
+  "actionOnReap": [
+    {
+      "action": "sound",
+      "options": [ "/sfx/melee/kill_wood1.ogg", "/sfx/melee/kill_wood2.ogg" ]
+    },
+    {
+      "action": "sound",
+      "options": [ "/sfx/environmental/tree_metal_hitground.ogg", "/sfx/environmental/tree_metal_hitground2.ogg" ]
+    },
+    { "action": "projectile", "type": "pat_terramartgun_crate_metal", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ] },
+    {
+      "action": "option",
+      "options": [
+        { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".0" } },
+        {
+          "action": "actions",
+          "list": [
+            { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".1" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".2" } }
+          ]
+        }
+      ]
+    },
+    {
+      "action": "option",
+      "options": [
+        { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".3" } },
+        {
+          "action": "actions",
+          "list": [
+            { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".4" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_blue", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".5" } }
+          ]
+        }
+      ]
+    },
+    {
+      "action": "loop",
+      "count": 24,
+      "body": [
+        { "action": "spark" },
+        {
+          "action": "option",
+          "options": [
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".0" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".1" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".2" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".3" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".4" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".5" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".6" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".7" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".8" } },
+            { "action": "projectile", "type": "pat_terramartgun_crate_wood", "fuzzAngle": 360, "offsetRange": [ -0.5, -0.5, 0.5, 0.5 ], "config": { "processing": ".9" } }
+          ]
+        }
+      ]
+    }
   ]
 }

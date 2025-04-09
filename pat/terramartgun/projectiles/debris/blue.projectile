@@ -1,0 +1,51 @@
+{
+  "projectileName": "pat_terramartgun_crate_blue",
+  "image": "blue.png",
+  "physics": "shrapnel",
+  "bounces": 7,
+  "timeToLive": 3,
+  "damageType": "NoDamage",
+  "onlyHitTerrain": true,
+  "orientationLocked": true,
+  "flippable": false,
+  "speed": 25,
+
+  "movementSettings": {
+    "bounceFactor": 0.6
+  },
+
+  "actionOnCollide": [
+    {
+      "action": "option",
+      "options": [
+        { "action": "spark" },
+        {
+          "action": "sound",
+          "options": [ "/sfx/melee/sword_hit_robotic.ogg", "/sfx/melee/spear_hit_robotic.ogg", "/sfx/melee/axe_hit_robotic.ogg", "/sfx/gun/impact_robotic1.ogg", "/sfx/gun/impact_robotic2.ogg", "/sfx/gun/impact_robotic3.ogg", "/sfx/gun/impact_robotic4.ogg", "/sfx/gun/impact_robotic5.ogg", "/sfx/melee/fist_hit_metal1.ogg", "/sfx/melee/fist_hit_metal2.ogg", "/sfx/melee/fist_hit_metal3.ogg", "/sfx/melee/fist_hit_metal4.ogg", "/sfx/melee/fist_hit_metal5.ogg", "/sfx/melee/fist_hit_metal6.ogg", "/sfx/melee/bite_robotic1.ogg", "/sfx/melee/bite_robotic2.ogg", "/sfx/melee/bite_robotic3.ogg" ]
+        }
+      ]
+    },
+    { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true }
+  ],
+
+  "actionOnReap": [
+    { "action": "spark" },
+    {
+      "action": "sound",
+      "options": [ "/sfx/objects/metalbarrel_break1.ogg", "/sfx/objects/metalbarrel_break2.ogg", "/sfx/objects/metalbarrel_break3.ogg" ]
+    },
+    {
+      "action": "loop",
+      "count": 2,
+      "body": [
+        { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true }
+      ]
+    }
+  ],
+
+  "scripts": [ "debris.lua" ],
+  "scriptDelta": 2,
+
+  "timeToLiveRange": [ 4, 8 ],
+  "rotationSpeed": 8
+}

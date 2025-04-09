@@ -1,0 +1,40 @@
+{
+  "projectileName": "pat_terramartgun_crate_wood",
+  "image": "wood.png",
+  "physics": "shrapnel",
+  "bounces": 5,
+  "timeToLive": 3,
+  "damageType": "NoDamage",
+  "onlyHitTerrain": true,
+  "orientationLocked": true,
+  "flippable": false,
+  "speed": 35,
+
+  "actionOnCollide": [
+    {
+      "action": "option",
+      "options": [
+        { "action": "spark" },
+        { "action": "spark" },
+        { "action": "spark" },
+        { "action": "spark" },
+        {
+          "action": "sound",
+          "options": [ "/sfx/objects/wood_break1.ogg", "/sfx/objects/wood_break2.ogg", "/sfx/objects/wood_break3.ogg", "/sfx/objects/wood_break4.ogg", "/sfx/objects/wood_break5.ogg", "/sfx/objects/wood_break6.ogg" ]
+        }
+      ]
+    },
+    { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true }
+  ],
+
+  "actionOnReap": [
+    { "action": "spark" },
+    { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true }
+  ],
+
+  "scripts": [ "debris.lua" ],
+  "scriptDelta": 2,
+
+  "timeToLiveRange": [ 3, 7 ],
+  "rotationSpeed": 25
+}
