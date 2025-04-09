@@ -89,6 +89,16 @@
           ]
         }
       ]
+    },
+    {
+      "action": "loop",
+      "count": 6,
+      "body": [
+        { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true }
+      ]
     }
   ]
 }
