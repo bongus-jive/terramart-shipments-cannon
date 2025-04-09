@@ -1,0 +1,9 @@
+{
+  "b-1": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:b.1" },
+  "b-2": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:b.2" },
+  "y-1": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:y.1" },
+  "y-2": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:y.2" },
+  "r-1": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:r.1" },
+  "r-2": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:r.2" },
+  "r-3": { "offset": [ 15, 15 ], "image": "/pat/terramartgun/cursors/terramartgun.png:r.3" }
+}

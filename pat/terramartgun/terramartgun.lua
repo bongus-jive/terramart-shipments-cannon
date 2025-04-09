@@ -25,6 +25,12 @@ function GunFire:update(dt, fireMode, shiftHeld)
 
   animator.setGlobalTag("direction", mcontroller.facingDirection() == 1 and "R" or "L")
 
+  local cursor = animator.animationStateProperty("gun", "cursor")
+  if cursor and cursor ~= self.cursor then
+    self.cursor = cursor
+    activeItem.setCursor("/pat/terramartgun/cursors/terramartgun.cursors:"..cursor)
+  end
+
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
   and not self.weapon.currentAbility
   and animator.animationState("gun") == "ready"
