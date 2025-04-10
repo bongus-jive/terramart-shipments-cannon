@@ -33,6 +33,7 @@
   ],
 
   "actionOnReap": [
+    { "action": "particle", "specification": "pat_terramartgun_explosion" },
     {
       "action": "sound",
       "options": [ "/sfx/melee/kill_wood1.ogg", "/sfx/melee/kill_wood2.ogg" ]
@@ -92,8 +93,9 @@
     },
     {
       "action": "loop",
-      "count": 6,
+      "count": 8,
       "body": [
+        { "action": "particle", "specification": "pat_terramartgun_explosionfire" },
         { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
         { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
         { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true },
