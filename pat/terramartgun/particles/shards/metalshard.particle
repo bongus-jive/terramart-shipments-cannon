@@ -1,25 +1,26 @@
 {
-  "kind": "pat_terramartgun_woodshard",
+  "kind": "pat_terramartgun_metalshard",
   "definition": {
     "type": "animated",
-    "animation": "/pat/terramartgun/particles/debris/woodshard.particle:animation",
-    "initialVelocity": [ 0, 8 ],
+    "animation": "/pat/terramartgun/particles/shards/metalshard.particle:animation",
+    "initialVelocity": [ 0, 0 ],
     "finalVelocity": [ 0, -60 ],
     "approach": [ 0.3, 60 ],
     "timeToLive": 0,
     "destructionTime": 0.5,
-    "destructionAction": "fade",
+    "destructionAction": "shrink",
     "layer": "middle",
     "collidesForeground": true,
     "variance": {
-      "initialVelocity": [ 5, 3 ],
+      "initialVelocity": [ 20, 20 ],
       "finalVelocity": [ 0, 20 ],
       "rotation": 180,
-      "angularVelocity": 180
+      "angularVelocity": 180,
+      "position": [ 1.5, 0 ]
     }
   },
   "animation": {
-    "frames": "woodshard.png:<index>",
+    "frames": "metalshard.png:<index>",
     "frameNumber": 5,
     "animationCycle": 0.5
   }

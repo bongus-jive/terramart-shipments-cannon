@@ -1,9 +1,9 @@
 {
-  "kind": "pat_terramartgun_metalshard",
+  "kind": "pat_terramartgun_blueshard",
   "definition": {
     "type": "animated",
-    "animation": "/pat/terramartgun/particles/debris/metalshard.particle:animation",
-    "initialVelocity": [ 0, 0 ],
+    "animation": "/pat/terramartgun/particles/shards/blueshard.particle:animation",
+    "initialVelocity": [ 0, 8 ],
     "finalVelocity": [ 0, -60 ],
     "approach": [ 0.3, 60 ],
     "timeToLive": 0,
@@ -12,15 +12,15 @@
     "layer": "middle",
     "collidesForeground": true,
     "variance": {
-      "initialVelocity": [ 20, 20 ],
+      "initialVelocity": [ 5, 3 ],
       "finalVelocity": [ 0, 20 ],
       "rotation": 180,
       "angularVelocity": 180,
-      "position": [ 1.5, 0 ]
+      "position": [ 0.4, 0.25 ]
     }
   },
   "animation": {
-    "frames": "metalshard.png:<index>",
+    "frames": "blueshard.png:<index>",
     "frameNumber": 5,
     "animationCycle": 0.5
   }
