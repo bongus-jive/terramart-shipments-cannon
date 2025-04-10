@@ -7,7 +7,7 @@
   "pointLight": true,
   "flippable": true,
   "power": 10,
-  "speed": 2,
+  "speed": 5,
   "acceleration": 80,
   "bounces": 0,
 

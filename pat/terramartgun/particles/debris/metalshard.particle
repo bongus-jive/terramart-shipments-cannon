@@ -3,7 +3,7 @@
   "definition": {
     "type": "animated",
     "animation": "/pat/terramartgun/particles/debris/metalshard.particle:animation",
-    "initialVelocity": [ 0, 15 ],
+    "initialVelocity": [ 0, 0 ],
     "finalVelocity": [ 0, -60 ],
     "approach": [ 0.3, 60 ],
     "timeToLive": 0,
@@ -12,7 +12,7 @@
     "layer": "middle",
     "collidesForeground": true,
     "variance": {
-      "initialVelocity": [ 16, 5 ],
+      "initialVelocity": [ 20, 20 ],
       "finalVelocity": [ 0, 20 ],
       "rotation": 180,
       "angularVelocity": 180,
