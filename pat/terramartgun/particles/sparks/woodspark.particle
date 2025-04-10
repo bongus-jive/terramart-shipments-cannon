@@ -1,0 +1,22 @@
+{
+  "kind": "pat_terramartgun_woodspark",
+  "definition": {
+    "type": "ember",
+    "size": 1.25,
+    "color": [ 109, 99, 48 ],
+    "initialVelocity": [ 0, 0 ],
+    "finalVelocity": [ 0, -20 ],
+    "approach": [ 15, 30 ],
+    "layer": "middle",
+    "timeToLive": 0.4,
+    "destructionTime": 0.4,
+    "destructionAction": "shrink",
+    "collidesForeground": true,
+    "trail": true,
+    "variance": {
+      "size": 0.75,
+      "timeToLive": 0.25,
+      "initialVelocity": [ 25, 25 ]
+    }
+  }
+}

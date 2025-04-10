@@ -25,7 +25,8 @@
         }
       ]
     },
-    { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true }
+    { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true },
+    { "action": "particle", "specification": "pat_terramartgun_bluespark" }
   ],
 
   "actionOnReap": [
@@ -38,7 +39,8 @@
       "action": "loop",
       "count": 2,
       "body": [
-        { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true }
+        { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_bluespark" }
       ]
     }
   ],

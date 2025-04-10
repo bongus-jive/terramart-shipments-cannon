@@ -99,7 +99,11 @@
         { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
         { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
         { "action": "particle", "specification": "pat_terramartgun_blueshard", "rotate": true },
-        { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true }
+        { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_woodspark" },
+        { "action": "particle", "specification": "pat_terramartgun_woodspark" },
+        { "action": "particle", "specification": "pat_terramartgun_bluespark" },
+        { "action": "particle", "specification": "pat_terramartgun_metalspark" }
       ]
     }
   ]

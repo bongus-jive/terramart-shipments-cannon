@@ -17,7 +17,7 @@
         { "action": "spark" },
         { "action": "spark" },
         { "action": "spark" },
-        { "action": "spark" },
+        { "action": "particle", "specification": "pat_terramartgun_woodspark" },
         {
           "action": "sound",
           "options": [ "/sfx/objects/wood_break1.ogg", "/sfx/objects/wood_break2.ogg", "/sfx/objects/wood_break3.ogg", "/sfx/objects/wood_break4.ogg", "/sfx/objects/wood_break5.ogg", "/sfx/objects/wood_break6.ogg" ]
@@ -29,7 +29,8 @@
 
   "actionOnReap": [
     { "action": "spark" },
-    { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true }
+    { "action": "particle", "specification": "pat_terramartgun_woodshard", "rotate": true },
+    { "action": "particle", "specification": "pat_terramartgun_woodspark" }
   ],
 
   "scripts": [ "debris.lua" ],

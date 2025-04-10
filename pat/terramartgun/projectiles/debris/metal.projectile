@@ -19,7 +19,8 @@
       "action": "sound",
       "options": [ "/sfx/melee/sword_hit_robotic.ogg", "/sfx/melee/spear_hit_robotic.ogg", "/sfx/melee/axe_hit_robotic.ogg", "/sfx/gun/impact_robotic1.ogg", "/sfx/gun/impact_robotic2.ogg", "/sfx/gun/impact_robotic3.ogg", "/sfx/gun/impact_robotic4.ogg", "/sfx/gun/impact_robotic5.ogg", "/sfx/melee/fist_hit_metal1.ogg", "/sfx/melee/fist_hit_metal2.ogg", "/sfx/melee/fist_hit_metal3.ogg", "/sfx/melee/fist_hit_metal4.ogg", "/sfx/melee/fist_hit_metal5.ogg", "/sfx/melee/fist_hit_metal6.ogg", "/sfx/melee/bite_robotic1.ogg", "/sfx/melee/bite_robotic2.ogg", "/sfx/melee/bite_robotic3.ogg" ]
     },
-    { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true }
+    { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true },
+    { "action": "particle", "specification": "pat_terramartgun_metalspark" }
   ],
 
   "actionOnReap": [
@@ -32,7 +33,8 @@
       "action": "loop",
       "count": 5,
       "body": [
-        { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true }
+        { "action": "particle", "specification": "pat_terramartgun_metalshard", "rotate": true },
+        { "action": "particle", "specification": "pat_terramartgun_metalspark" }
       ]
     }
   ],
