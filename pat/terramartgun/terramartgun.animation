@@ -13,7 +13,8 @@
             "cycle": 0.25,
             "mode": "loop",
             "properties": {
-              "cursor": "b-1"
+              "cursor": "b-1",
+              "isReady": true
             }
           },
           "reload": {
@@ -41,6 +42,33 @@
               "cursor": [ "b-2", "r-3", "r-2", "r-1", "r-1", "r-1", "r-1", "r-1", "r-2", "r-3", "y-2", "b-2" ],
               "immediateSound": [ "", "/sfx/objects/cropshipper_arm_down.ogg", "", "", "", "", "", "", "/sfx/objects/cropshipper_door_close.ogg", "", "" ]
             }
+          },
+          "error": {
+            "frames": 2,
+            "cycle": 0.25,
+            "mode": "loop",
+            "properties": { "cursor": "r-1" }
+          },
+          "toerror": {
+            "frames": 2,
+            "cycle": 0.11,
+            "mode": "transition",
+            "transition": "error",
+            "frameProperties": {
+              "cursor": [ "b-2", "r-2" ]
+            }
+          },
+          "toready": {
+            "frames": 2,
+            "cycle": 0.11,
+            "mode": "transition",
+            "transition": "ready",
+            "properties": {
+              "isReady": true
+            },
+            "frameProperties": {
+              "cursor": [ "r-2", "b-2" ]
+            }
           }
         }
       }
@@ -58,7 +86,10 @@
           "gun": {
             "ready": { "properties": { "image": "<partImage>:ready.<direction>.<frame>" } },
             "reload": { "properties": { "image": "<partImage>:reload.<frame>" } },
-            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } }
+            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } },
+            "error": { "properties": { "image": "<partImage>:error.<frame>" } },
+            "toerror": { "properties": { "image": "<partImage>:toerror.<frame>" } },
+            "toready": { "properties": { "image": "<partImage>:toready.<frame>" } }
           }
         }
       },
@@ -74,7 +105,10 @@
           "gun": {
             "ready": { "properties": { "image": "<partImage>:ready.<direction>.<frame>" } },
             "reload": { "properties": { "image": "<partImage>:reload.<frame>" } },
-            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } }
+            "fire": { "properties": { "image": "<partImage>:fire.<frame>" } },
+            "error": { "properties": { "image": "<partImage>:error.<frame>" } },
+            "toerror": { "properties": { "image": "<partImage>:toerror.<frame>" } },
+            "toready": { "properties": { "image": "<partImage>:toready.<frame>" } }
           }
         }
       },
@@ -115,6 +149,9 @@
     "fire": {
       "pool": [ "/sfx/objects/cropshipper_launch.ogg" ],
       "volume": 1.2
+    },
+    "error": {
+      "pool": [ "/sfx/interface/clickon_error.ogg" ]
     }
   }
 }

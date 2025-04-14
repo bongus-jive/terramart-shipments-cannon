@@ -1,11 +1,16 @@
 {
   "frameGrid": {
     "size": [ 80, 64 ],
-    "dimensions": [ 11, 3 ],
+    "dimensions": [ 11, 4 ],
     "names": [
-      [ "reload.1", "reload.2", "reload.3", "reload.4", "reload.5", "reload.6", "reload.7", "reload.8", null, "ready.L.1", "ready.L.2" ],
-      [ "reload.9", "reload.10", "reload.11", "reload.12", "reload.13", "reload.14", "reload.15", "reload.16", null, "ready.R.1", "ready.R.2" ],
-      [ "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6", "fire.7", "fire.8", "fire.9", "fire.10", "fire.11" ]
+      [ "reload.1", "reload.2", "reload.3", "reload.4", "reload.5", "reload.6", "reload.7", "reload.8", null, "ready.R.1", "ready.R.2" ],
+      [ "reload.9", "reload.10", "reload.11", "reload.12", "reload.13", "reload.14", "reload.15", "reload.16", null, "ready.L.1", "ready.L.2" ],
+      [ "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6", "fire.7", "fire.8", null, "toerror.1", "toerror.2" ],
+      [ "fire.9", "fire.10", "fire.11", null, null, null, null, null, null, "error.1", "error.2" ]
     ]
+  },
+  "aliases": {
+    "toready.1": "toerror.2",
+    "toready.2": "toerror.1"
   }
 }

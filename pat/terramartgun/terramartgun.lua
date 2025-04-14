@@ -18,6 +18,10 @@ function GunFire:init()
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
   end
+
+  if not self.activatingFireMode then
+    self.activatingFireMode = self.abilitySlot
+  end
 end
 
 function GunFire:update(dt, fireMode, shiftHeld)
@@ -31,15 +35,23 @@ function GunFire:update(dt, fireMode, shiftHeld)
     activeItem.setCursor("/pat/terramartgun/cursors/terramartgun.cursors:"..cursor)
   end
 
-  if self.fireMode == (self.activatingFireMode or self.abilitySlot)
-  and not self.weapon.currentAbility
-  and animator.animationState("gun") == "ready"
-  and status.overConsumeResource("energy", self:energyPerShot()) then
-    self:setState(self.auto)
+  local gunState = animator.animationState("gun")
+  if gunState == "ready" and not self:canFire() then
+    animator.setAnimationState("gun", "toerror")
+  elseif gunState == "error" and self:canFire() then
+    animator.setAnimationState("gun", "toready")
+  end
+ 
+  if self.fireMode == self.activatingFireMode and not self.weapon.currentAbility then
+    if animator.animationStateProperty("gun", "isReady") and status.overConsumeResource("energy", self:energyPerShot()) then
+      self:setState(self.fire)
+    elseif gunState == "error" then
+      self:setState(self.error)
+    end
   end
 end
 
-function GunFire:auto()
+function GunFire:fire()
   self.weapon:setStance(self.stances.fire)
 
   self:fireProjectile()
@@ -94,6 +106,17 @@ end
 
 function GunFire:damagePerShot()
   return (self.baseDamage or (self.baseDps * self.fireTime)) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier")
+end
+
+function GunFire:canFire()
+  return not status.resourceLocked("energy") and not world.lineTileCollision(mcontroller.position(), self:firePosition())
+end
+
+function GunFire:error()
+  animator.playSound("error")
+  while self.fireMode == self.activatingFireMode do
+    coroutine.yield()
+  end
 end
 
 function GunFire:uninit() end
