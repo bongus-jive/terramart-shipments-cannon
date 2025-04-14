@@ -27,7 +27,7 @@
 
   "primaryAbility": {
     "scripts": [ "/pat/terramartgun/terramartgun.lua" ],
-    "class": "GunFire",
+    "class": "TerramartGun",
 
     "fireTime": 1,
     "baseDps": 0.33,

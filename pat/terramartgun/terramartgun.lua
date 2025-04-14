@@ -1,9 +1,9 @@
 require "/scripts/util.lua"
 require "/scripts/interp.lua"
 
-GunFire = WeaponAbility:new()
+TerramartGun = WeaponAbility:new()
 
-function GunFire:init()
+function TerramartGun:init()
   for _, stance in pairs(self.stances) do
     if stance ~= self.stances.__base then
       setmetatable(stance, {__index = self.stances.__base})
@@ -24,7 +24,7 @@ function GunFire:init()
   end
 end
 
-function GunFire:update(dt, fireMode, shiftHeld)
+function TerramartGun:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
   animator.setGlobalTag("direction", mcontroller.facingDirection() == 1 and "R" or "L")
@@ -51,7 +51,7 @@ function GunFire:update(dt, fireMode, shiftHeld)
   end
 end
 
-function GunFire:fire()
+function TerramartGun:fire()
   self.weapon:setStance(self.stances.fire)
 
   self:fireProjectile()
@@ -64,7 +64,7 @@ function GunFire:fire()
   self:setState(self.cooldown)
 end
 
-function GunFire:cooldown()
+function TerramartGun:cooldown()
   local stance1, stance2 = self.stances.cooldown, self.stances.idle
   self.weapon:setStance(stance1)
 
@@ -77,46 +77,46 @@ function GunFire:cooldown()
   end)
 end
 
-function GunFire:muzzleFlash()
+function TerramartGun:muzzleFlash()
   animator.setPartTag("muzzleFlash", "variant", math.random(1, 3))
   animator.burstParticleEmitter("muzzleFlash")
   animator.playSound("fire")
 end
 
-function GunFire:fireProjectile()	
+function TerramartGun:fireProjectile()	
   local params = sb.jsonMerge(self.projectileParameters)
   params.power = self:damagePerShot()
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
   world.spawnProjectile(self.projectileType, self:firePosition(), activeItem.ownerEntityId(), self:aimVector(), false, params)
 end
 
-function GunFire:firePosition()
+function TerramartGun:firePosition()
   return vec2.add(mcontroller.position(), activeItem.handPosition(self.weapon.muzzleOffset))
 end
 
-function GunFire:aimVector()
+function TerramartGun:aimVector()
   local angle = self.weapon.aimAngle
   local dir = mcontroller.facingDirection()
   return {math.cos(angle) * dir, math.sin(angle)}
 end
 
-function GunFire:energyPerShot()
+function TerramartGun:energyPerShot()
   return self.energyUsage * self.fireTime * (self.energyUsageMultiplier or 1.0)
 end
 
-function GunFire:damagePerShot()
+function TerramartGun:damagePerShot()
   return (self.baseDamage or (self.baseDps * self.fireTime)) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier")
 end
 
-function GunFire:canFire()
+function TerramartGun:canFire()
   return not status.resourceLocked("energy") and not world.lineTileCollision(mcontroller.position(), self:firePosition())
 end
 
-function GunFire:error()
+function TerramartGun:error()
   animator.playSound("error")
   while self.fireMode == self.activatingFireMode do
     coroutine.yield()
   end
 end
 
-function GunFire:uninit() end
+function TerramartGun:uninit() end
