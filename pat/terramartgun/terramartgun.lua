@@ -56,6 +56,7 @@ function TerramartGun:fire()
 
   self:fireProjectile()
   self:muzzleFlash()
+  self:recoil()
 
   if self.stances.fire.duration then
     util.wait(self.stances.fire.duration)
@@ -88,6 +89,12 @@ function TerramartGun:fireProjectile()
   params.power = self:damagePerShot()
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
   world.spawnProjectile(self.projectileType, self:firePosition(), activeItem.ownerEntityId(), self:aimVector(), false, params)
+end
+
+function TerramartGun:recoil()
+  if not self.recoilPower then return end
+  local vec = vec2.mul(self:aimVector(), -self.recoilPower)
+  mcontroller.addMomentum(vec)
 end
 
 function TerramartGun:firePosition()

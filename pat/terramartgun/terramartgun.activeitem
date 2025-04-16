@@ -33,6 +33,8 @@
     "baseDps": 0.33,
     "energyUsage": 70,
 
+    "recoilPower": 60,
+
     "projectileType": "pat_terramartgun_crate",
     "projectileParameters": { },
 
