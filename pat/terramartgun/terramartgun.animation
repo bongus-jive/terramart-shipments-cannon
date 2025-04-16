@@ -14,7 +14,9 @@
             "mode": "loop",
             "properties": {
               "cursor": "b-1",
-              "isReady": true
+              "isReady": true,
+              "lightsOn": [ "B" ],
+              "lightsOff": [ "Y", "R" ]
             }
           },
           "reload": {
@@ -27,7 +29,9 @@
             },
             "frameProperties": {
               "cursor": [ "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-1", "y-2", "b-2" ],
-              "immediateSound": [ "", "/sfx/objects/cropshipper_door_open.ogg", "", "", "", "", "/sfx/objects/cropshipper_arm_up.ogg", "", "", "", "", "", "", "", "/sfx/objects/cropshipper_box_lock3.ogg", "" ]
+              "immediateSound": [ "", "/sfx/objects/cropshipper_door_open.ogg", "", "", "", "", "/sfx/objects/cropshipper_arm_up.ogg", "", "", "", "", "", "", "", "/sfx/objects/cropshipper_box_lock3.ogg", "" ],
+              "lightsOn": [ [ "Y" ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ "B" ] ],
+              "lightsOff": [ [ "B", "R" ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ "Y", "R" ] ]
             }
           },
           "fire": {
@@ -39,15 +43,21 @@
               "immediateSoundRangeMultiplier": 0.5
             },
             "frameProperties": {
-              "cursor": [ "b-2", "r-3", "r-2", "r-1", "r-1", "r-1", "r-1", "r-1", "r-2", "r-3", "y-2", "b-2" ],
-              "immediateSound": [ "", "/sfx/objects/cropshipper_arm_down.ogg", "", "", "", "", "", "", "/sfx/objects/cropshipper_door_close.ogg", "", "" ]
+              "cursor": [ "b-2", "r-3", "r-2", "r-1", "r-1", "r-1", "r-1", "r-1", "r-2", "r-3", "y-2" ],
+              "immediateSound": [ "", "/sfx/objects/cropshipper_arm_down.ogg", "", "", "", "", "", "", "/sfx/objects/cropshipper_door_close.ogg", "", "" ],
+              "lightsOn": [ [ "B" ], [ "R" ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ "Y" ], [ ] ],
+              "lightsOff": [ [ "Y", "R" ], [ "B", "Y" ], [ ], [ ], [ ], [ ], [ ], [ ], [ ], [ "B", "R" ], [ ] ]
             }
           },
           "error": {
             "frames": 2,
             "cycle": 0.25,
             "mode": "loop",
-            "properties": { "cursor": "r-1" }
+            "properties": {
+              "cursor": "r-1",
+              "lightsOn": [ "R" ],
+              "lightsOff": [ "B", "Y" ]
+            }
           },
           "toerror": {
             "frames": 2,
@@ -55,7 +65,9 @@
             "mode": "transition",
             "transition": "error",
             "frameProperties": {
-              "cursor": [ "b-2", "r-2" ]
+              "cursor": [ "b-2", "r-2" ],
+              "lightsOn": [ [ "B" ], [ "R" ] ],
+              "lightsOff": [ [ "Y", "R" ], [ "B", "Y" ] ]
             }
           },
           "toready": {
@@ -63,11 +75,11 @@
             "cycle": 0.11,
             "mode": "transition",
             "transition": "ready",
-            "properties": {
-              "isReady": true
-            },
+            "properties": { "isReady": true },
             "frameProperties": {
-              "cursor": [ "r-2", "b-2" ]
+              "cursor": [ "r-2", "b-2" ],
+              "lightsOn": [ [ "R" ], [ "B" ] ],
+              "lightsOff": [ [ "B", "Y" ], [ "Y", "R" ] ]
             }
           }
         }
@@ -138,11 +150,9 @@
   },
 
   "lights": {
-    "muzzleFlash": {
-      "active": false,
-      "position": [ 0, 0 ],
-      "color": [ 90, 90, 0 ]
-    }
+    "B": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 15, 35, 75 ] },
+    "Y": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 75, 45, 10 ] },
+    "R": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 75, 20, 15 ] }
   },
 
   "sounds": {
