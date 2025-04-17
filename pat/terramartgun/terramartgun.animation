@@ -150,9 +150,9 @@
   },
 
   "lights": {
-    "B": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 15, 35, 75 ] },
-    "Y": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 75, 45, 10 ] },
-    "R": { "active": false, "position": [ 1.25, 0.5 ], "color": [ 75, 20, 15 ] }
+    "B": { "active": false, "position": [ 1.25, 0.5 ], "flickerPeriod": 1.5, "flickerMinIntensity": 0.85, "flickerMaxIntensity": 1, "color": [ 15, 35, 75 ] },
+    "Y": { "active": false, "position": [ 1.25, 0.5 ], "flickerPeriod": 1.5, "flickerMinIntensity": 0.85, "flickerMaxIntensity": 1, "color": [ 75, 45, 10 ] },
+    "R": { "active": false, "position": [ 1.25, 0.5 ], "flickerPeriod": 1.5, "flickerMinIntensity": 0.85, "flickerMaxIntensity": 1, "color": [ 75, 20, 15 ] }
   },
 
   "sounds": {
