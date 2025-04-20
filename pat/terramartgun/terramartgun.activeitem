@@ -6,8 +6,8 @@
   "rarity": "Legendary",
   "description": "Yes",
   "shortdescription": "Terramart Shipments Gun",
-  "level": 10,
-  "tooltipKind": "gun",
+  "level": 6,
+  "tooltipKind": "base",
   "category": "rocketLauncher",
   "itemTags": [ "weapon", "ranged", "rocketlauncher" ],
   "twoHanded": true,
@@ -29,10 +29,8 @@
     "scripts": [ "/pat/terramartgun/terramartgun.lua" ],
     "class": "TerramartGun",
 
-    "fireTime": 1,
-    "baseDps": 0.33,
-    "energyUsage": 70,
-
+    "baseDamage": 16,
+    "energyUsage": 100,
     "recoilPower": 60,
 
     "projectileType": "pat_terramartgun_crate",
@@ -54,8 +52,11 @@
         }
       },
       "cooldown": {
-        "duration": 1.2,
-        "weaponOffset": [ -0.5, 0 ]
+        "duration": 0.6,
+        "armRotation": 3,
+        "weaponRotation": 3,
+        "weaponOffset": [ -0.5, 0 ],
+        "weaponRotationCenter": [ 0, 1 ]
       }
     }
   },

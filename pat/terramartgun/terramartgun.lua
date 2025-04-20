@@ -1,5 +1,5 @@
 require "/scripts/util.lua"
-require "/scripts/interp.lua"
+require "/scripts/vec2.lua"
 
 TerramartGun = WeaponAbility:new()
 
@@ -43,7 +43,7 @@ function TerramartGun:update(dt, fireMode, shiftHeld)
   end
  
   if self.fireMode == self.activatingFireMode and not self.weapon.currentAbility then
-    if animator.animationStateProperty("gun", "isReady") and status.overConsumeResource("energy", self:energyPerShot()) then
+    if animator.animationStateProperty("gun", "isReady") and status.overConsumeResource("energy", self.energyUsage) then
       self:setState(self.fire)
     elseif gunState == "error" then
       self:setState(self.error)
@@ -86,8 +86,8 @@ end
 
 function TerramartGun:fireProjectile()	
   local params = sb.jsonMerge(self.projectileParameters)
-  params.power = self:damagePerShot()
-  params.powerMultiplier = activeItem.ownerPowerMultiplier()
+  params.power = self.baseDamage
+  params.powerMultiplier = activeItem.ownerPowerMultiplier() * self.weapon.damageLevelMultiplier
   world.spawnProjectile(self.projectileType, self:firePosition(), activeItem.ownerEntityId(), self:aimVector(), false, params)
 end
 
@@ -105,14 +105,6 @@ function TerramartGun:aimVector()
   local angle = self.weapon.aimAngle
   local dir = mcontroller.facingDirection()
   return {math.cos(angle) * dir, math.sin(angle)}
-end
-
-function TerramartGun:energyPerShot()
-  return self.energyUsage * self.fireTime * (self.energyUsageMultiplier or 1.0)
-end
-
-function TerramartGun:damagePerShot()
-  return (self.baseDamage or (self.baseDps * self.fireTime)) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier")
 end
 
 function TerramartGun:canFire()
