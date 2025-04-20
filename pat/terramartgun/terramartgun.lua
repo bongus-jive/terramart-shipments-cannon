@@ -35,6 +35,10 @@ function TerramartGun:update(dt, fireMode, shiftHeld)
     activeItem.setCursor("/pat/terramartgun/cursors/terramartgun.cursors:"..cursor)
   end
 
+  if animator.animationStateProperty("gun", "blockEnergyRegen") then
+    status.setResourcePercentage("energyRegenBlock", 1.0)
+  end
+
   local gunState = animator.animationState("gun")
   if gunState == "ready" and not self:canFire() then
     animator.setAnimationState("gun", "toerror")
