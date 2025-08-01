@@ -1,0 +1,31 @@
+{
+  "projectileName": "pat_terramartgun_junk",
+  "image": "junk.png",
+  "physics": "shrapnel",
+  "bounces": 12,
+  "timeToLive": 3,
+  "damageType": "NoDamage",
+  "onlyHitTerrain": true,
+  "orientationLocked": true,
+  "flippable": false,
+  "speed": 18,
+
+  "actionOnCollide": [
+    {
+      "action": "option",
+      "options": [
+        { "action": "spark" },
+        {
+          "action": "sound",
+          "options": [ "/sfx/blocks/water_puddlemod.ogg", "/sfx/blocks/footstep_brains.ogg", "/sfx/blocks/footstep_wetclay.ogg" ]
+        }
+      ]
+    }
+  ],
+
+  "scripts": [ "/pat/terramartgun/projectiles/debris.lua" ],
+  "scriptDelta": 2,
+
+  "timeToLiveRange": [ 4, 8 ],
+  "rotationSpeed": 60
+}
