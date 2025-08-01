@@ -1,0 +1,20 @@
+{
+  "projectileName": "pat_terramartgun_seed_dirturchin",
+  "image": "seeds.png:dirturchin",
+  "physics": "shrapnel",
+  "speed": 25,
+  "timeToLive": 6,
+  "damageType": "NoDamage",
+  "onlyHitTerrain": true,
+  "orientationLocked": true,
+  "flippable": false,
+  "actionOnReap": [ "spark" ],
+
+  "scripts": [ "/pat/terramartgun/projectiles/seeds/seeds.lua" ],
+  "scriptDelta": 2,
+
+  "seedType": "dirturchinseed",
+  "seedParameters": { "smashOnBreak": true },
+  
+  "rotationSpeed": 30
+}

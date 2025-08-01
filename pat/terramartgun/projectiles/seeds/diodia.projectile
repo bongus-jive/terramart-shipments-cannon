@@ -1,0 +1,20 @@
+{
+  "projectileName": "pat_terramartgun_seed_diodia",
+  "image": "seeds.png:diodia",
+  "physics": "shrapnel",
+  "speed": 25,
+  "timeToLive": 6,
+  "damageType": "NoDamage",
+  "onlyHitTerrain": true,
+  "orientationLocked": true,
+  "flippable": false,
+  "actionOnReap": [ "spark" ],
+
+  "scripts": [ "/pat/terramartgun/projectiles/seeds/seeds.lua" ],
+  "scriptDelta": 2,
+
+  "seedType": "diodiaseed",
+  "seedParameters": { "smashOnBreak": true },
+  
+  "rotationSpeed": 30
+}

@@ -105,6 +105,51 @@
         { "action": "particle", "specification": "pat_terramartgun_bluespark" },
         { "action": "particle", "specification": "pat_terramartgun_metalspark" }
       ]
+    },
+    {
+      "action": "loop",
+      "count": 10,
+      "body": [
+        {
+          "action": "option",
+          "options": [
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_automato" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_avesmingo" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_banana" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_beakseed" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_boltbulb" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_boneboo" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_carrot" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_chili" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_cocoa" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_coffee" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_coralcreep" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_corn" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_cotton" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_crystalplant" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_currentcorn" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_diodia" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_dirturchin" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_eggshoot" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_feathercrown" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_grapes" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_kiwi" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_neonmelon" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_oculemon" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_pearlpea" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_pineapple" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_potato" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_pussplum" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_reefpod" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_rice" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_sugarcane" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_tomato" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_toxictop" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_wartweed" },
+            { "action": "projectile", "fuzzAngle": 360, "type": "pat_terramartgun_seed_wheat" }
+          ]
+        }
+      ]
     }
   ]
 }
