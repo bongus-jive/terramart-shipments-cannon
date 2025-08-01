@@ -3,6 +3,7 @@
   "image": "seeds.png:dirturchin",
   "physics": "shrapnel",
   "speed": 25,
+  "bounces": 1,
   "timeToLive": 6,
   "damageType": "NoDamage",
   "onlyHitTerrain": true,
