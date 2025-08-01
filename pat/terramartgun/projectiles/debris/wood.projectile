@@ -33,7 +33,7 @@
     { "action": "particle", "specification": "pat_terramartgun_woodspark" }
   ],
 
-  "scripts": [ "debris.lua" ],
+  "scripts": [ "/pat/terramartgun/projectiles/debris.lua" ],
   "scriptDelta": 2,
 
   "timeToLiveRange": [ 3, 7 ],

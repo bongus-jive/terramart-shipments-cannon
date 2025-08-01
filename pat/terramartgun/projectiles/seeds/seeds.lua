@@ -1,4 +1,4 @@
-require "/pat/terramartgun/projectiles/debris/debris.lua"
+require "/pat/terramartgun/projectiles/debris.lua"
 
 function destroy()
   local seed = config.getParameter("seedType")

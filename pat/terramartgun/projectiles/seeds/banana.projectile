@@ -10,7 +10,7 @@
   "flippable": false,
   "actionOnReap": [ "spark" ],
 
-  "scripts": [ "/pat/terramartgun/projectiles/seeds/seeds.lua" ],
+  "scripts": [ "seeds.lua" ],
   "scriptDelta": 2,
 
   "seedType": "bananaseed",

@@ -45,7 +45,7 @@
     }
   ],
 
-  "scripts": [ "debris.lua" ],
+  "scripts": [ "/pat/terramartgun/projectiles/debris.lua" ],
   "scriptDelta": 2,
 
   "timeToLiveRange": [ 4, 8 ],
