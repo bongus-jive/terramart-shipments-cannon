@@ -42,5 +42,6 @@
   "scripts": [ "/pat/terramartgun/projectiles/debris.lua" ],
   "scriptDelta": 2,
 
-  "rotationSpeed": 12
+  "rotationSpeed": 12,
+  "rotationVariance": 1
 }

@@ -3,7 +3,7 @@
   "image": "junk.png",
   "physics": "shrapnel",
   "bounces": 12,
-  "timeToLive": 3,
+  "timeToLive": 8,
   "damageType": "NoDamage",
   "onlyHitTerrain": true,
   "orientationLocked": true,
@@ -26,6 +26,7 @@
   "scripts": [ "/pat/terramartgun/projectiles/debris.lua" ],
   "scriptDelta": 2,
 
-  "timeToLiveRange": [ 4, 8 ],
-  "rotationSpeed": 60
+  "timeToLiveRange": [ 6, 10 ],
+  "rotationSpeed": 50,
+  "rotationVariance": 5
 }

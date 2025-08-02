@@ -49,5 +49,6 @@
   "scriptDelta": 2,
 
   "timeToLiveRange": [ 4, 8 ],
-  "rotationSpeed": 8
+  "rotationSpeed": 8,
+  "rotationVariance": 0.5
 }
