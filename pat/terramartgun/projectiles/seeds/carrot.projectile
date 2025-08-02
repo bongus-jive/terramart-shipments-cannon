@@ -2,7 +2,7 @@
   "projectileName": "pat_terramartgun_seed_carrot",
   "image": "seeds.png:carrot",
   "physics": "shrapnel",
-  "speed": 25,
+  "speed": 45,
   "bounces": 1,
   "timeToLive": 6,
   "damageType": "NoDamage",
