@@ -3,12 +3,15 @@
     "size": [ 15, 15 ],
     "dimensions": [ 6, 6 ],
     "names": [
-      [ "automato:0",     "avesmingo:0",    "banana:0",       "beakseed:0",   "boltbulb:0",   "boneboo:0"   ],
-      [ "carrot:0",       "chili:0",        "cocoa:0",        "coffee:0",     "coralcreep:0", "corn:0"      ],
-      [ "cotton:0",       "crystalplant:0", "currentcorn:0",  "diodia:0",     "dirturchin:0", "eggshoot:0"  ],
-      [ "feathercrown:0", "grapes:0",       "kiwi:0",         "neonmelon:0",  "oculemon:0",   "pearlpea:0"  ],
-      [ "pineapple:0",    "potato:0",       "pussplum:0",     "reefpod:0",    "rice:0",       "sugarcane:0" ],
-      [ "tomato:0",       "toxictop:0",     "wartweed:0",     "wheat:0",      null,           null          ]
+      [ "0.automato",     "0.avesmingo",    "0.banana",       "0.beakseed",   "0.boltbulb",   "0.boneboo"   ],
+      [ "0.carrot",       "0.chili",        "0.cocoa",        "0.coffee",     "0.coralcreep", "0.corn"      ],
+      [ "0.cotton",       "0.crystalplant", "0.currentcorn",  "0.diodia",     "0.dirturchin", "0.eggshoot"  ],
+      [ "0.feathercrown", "0.grapes",       "0.kiwi",         "0.neonmelon",  "0.oculemon",   "0.pearlpea"  ],
+      [ "0.pineapple",    "0.potato",       "0.pussplum",     "0.reefpod",    "0.rice",       "0.sugarcane" ],
+      [ "0.tomato",       "0.toxictop",     "0.wartweed",     "0.wheat",      null,           null          ]
     ]
+  },
+  "aliases": {
+    "0": "0.automato"
   }
 }

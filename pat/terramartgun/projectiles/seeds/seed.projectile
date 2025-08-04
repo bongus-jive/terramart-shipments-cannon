@@ -1,6 +1,6 @@
 {
-  "projectileName": "pat_terramartgun_seed_boneboo",
-  "image": "seeds.png:boneboo",
+  "projectileName": "pat_terramartgun_seed",
+  "image": "seeds.png",
   "physics": "shrapnel",
   "speed": 45,
   "bounces": 1,
@@ -14,8 +14,10 @@
   "scripts": [ "seeds.lua" ],
   "scriptDelta": 2,
 
-  "seedType": "bonebooseed",
+  "seedType": null,
   "seedParameters": { "smashOnBreak": true },
-  
-  "rotationSpeed": 30
+
+  "rotationSpeed": 30,
+  "rotationVariance": 2,
+  "timeToLiveRange": [ 6, 8 ]
 }
