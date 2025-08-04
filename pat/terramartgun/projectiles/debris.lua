@@ -7,6 +7,8 @@ function init()
     self.rotationSpeed = sb.nrand(variance, self.rotationSpeed)
   end
 
+  if math.random(2) == 2 then self.rotationSpeed = -self.rotationSpeed end
+
   local ttlRange = config.getParameter("timeToLiveRange")
   if ttlRange then
     local ttl = ttlRange[1] + (math.random() * (ttlRange[2] - ttlRange[1]))
