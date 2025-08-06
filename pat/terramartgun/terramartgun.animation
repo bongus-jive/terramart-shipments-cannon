@@ -145,8 +145,11 @@
   "particleEmitters": {
     "muzzleFlash": {
       "transformationGroups": [ "muzzle" ],
-      "offsetRegion": [ 0, 0, 0, 0 ],
-      "particles": [ ]
+      "offsetRegion": [ -0.75, -0.5, 0.25, 0.5 ],
+      "particles": [
+        { "particle": "pat_terramartgun_gunsmoke1", "count": 12 },
+        { "particle": "pat_terramartgun_gunsmoke2", "count": 12 }
+      ]
     }
   },
 
