@@ -21,7 +21,7 @@
           },
           "reload": {
             "frames": 16,
-            "cycle": 1.6,
+            "cycle": 1.5,
             "mode": "transition",
             "transition": "ready",
             "properties": {
@@ -36,7 +36,7 @@
           },
           "fire": {
             "frames": 11,
-            "cycle": 1.1,
+            "cycle": 1.0,
             "mode": "transition",
             "transition": "reload",
             "properties": {
