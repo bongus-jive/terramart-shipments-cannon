@@ -1,16 +1,23 @@
 {
   "itemName": "pat_terramartgun",
-  "price": 69420,
-  "inventoryIcon": "images/icon.png",
+  "price": 3000,
   "maxStack": 1,
   "rarity": "Legendary",
   "description": "Yes",
-  "shortdescription": "Terramart Shipments Gun",
+  "shortdescription": "Terramart Cannon",
   "level": 6,
   "tooltipKind": "base",
   "category": "rocketLauncher",
   "itemTags": [ "weapon", "ranged", "rocketlauncher" ],
   "twoHanded": true,
+
+  "inventoryIcon": "images/icon.png",
+  "tooltipFields": {
+    "objectImage": [
+      { "image": "/pat/terramartgun/images/terramartgun.png:ready.R.1" },
+      { "image": "/pat/terramartgun/images/sign.png:R" }
+    ]
+  },
 
   "animation": "terramartgun.animation",
   "animationParts": {
