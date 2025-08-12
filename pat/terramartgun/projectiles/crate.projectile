@@ -13,9 +13,9 @@
 
   "physics": "rocket",
   "movementSettings": {
-    "collisionPoly": [ [ 1, 1.5 ], [ 1, -1.5 ], [ -1, -1.5 ], [ -1, 1.5 ] ]
+    "collisionPoly": [ [ 1.5, 1 ], [ 1.5, -1 ], [ -0.5, -1 ], [ -0.5, 1 ] ]
   },
-  "damagePoly": [ [ 12, 16 ], [ 12, -16 ], [ -8, -16 ], [ -8, 16 ] ],
+  "damagePoly": [ [ 16, 16 ], [ 16, -16 ], [ -4, -16 ], [ -4, 16 ] ],
 
   "persistentAudio": "/sfx/tech/tech_jetpack.ogg",
 
