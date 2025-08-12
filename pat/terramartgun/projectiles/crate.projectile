@@ -6,10 +6,9 @@
   "lightColor": [ 160, 120, 60 ],
   "pointLight": true,
   "flippable": true,
-  "power": 10,
   "speed": 5,
   "acceleration": 80,
-  "bounces": 0,
+  "damageType": "NoDamage",
 
   "physics": "rocket",
   "movementSettings": {
@@ -41,7 +40,7 @@
       "action": "sound",
       "options": [ "/sfx/environmental/tree_metal_hitground.ogg", "/sfx/environmental/tree_metal_hitground2.ogg" ]
     },
-    { "action": "particle", "specification": "pat_terramartgun_explosion" },
+    { "action": "config", "file": "/pat/terramartgun/projectiles/actions/spawnExplosions.config" },
     { "action": "config", "file": "/pat/terramartgun/projectiles/actions/spawnJunk.config" },
     { "action": "config", "file": "/pat/terramartgun/projectiles/actions/spawnSeeds.config" },
     { "action": "config", "file": "/pat/terramartgun/projectiles/actions/spawnDebris.config" }
