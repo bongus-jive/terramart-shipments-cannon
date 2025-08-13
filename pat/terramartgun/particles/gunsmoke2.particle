@@ -11,7 +11,7 @@
     "timeToLive": 0.4,
     "variance": {
       "size": 0.2,
-      "initialVelocity": [ 3, 8 ],
+      "initialVelocity": [ 6, 8 ],
       "rotation": 180,
       "angularVelocity": 180
     }
